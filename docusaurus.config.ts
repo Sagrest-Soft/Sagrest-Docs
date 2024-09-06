@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.sagrest.it',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -54,6 +54,7 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          blogSidebarTitle: 'Articoli recenti'
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -63,8 +64,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Sagrest',
       logo: {
@@ -76,7 +75,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentazione',
         },
         {to: '/blog', label: 'Blog', position: 'left'}
       ],
@@ -88,13 +87,13 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Introduzione a Sagrest',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Altro',
           items: [
             {
               label: 'Blog',

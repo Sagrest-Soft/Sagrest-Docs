@@ -10,8 +10,8 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Semplice e veloce',
+    Svg: require('@site/static/img/undraw_online_transactions.svg').default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -20,22 +20,22 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Concentrati sul tuo evento',
+    Svg: require('@site/static/img/undraw_cooking.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Gestisci in modo semplice e veloce le ordinazioni del tuo evento,
+        senza dover preoccuparti di tenere aggiornati inventario e statistiche.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Ordini online',
+    Svg: require('@site/static/img/undraw_online_groceries.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Permette agli utenti del tuo evento di ordinare anche da telefono.
+        In questo modo, riduci le code e aumenti la soddisfazione dei tuoi clienti.
       </>
     ),
   },
