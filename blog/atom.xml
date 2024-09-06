@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://docs.sagrest.it/blog</id>
+    <title>Sagrest Blog</title>
+    <updated>2024-09-06T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://docs.sagrest.it/blog"/>
+    <subtitle>Sagrest Blog</subtitle>
+    <icon>https://docs.sagrest.it/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Benvenuti nel blog di Sagrest]]></title>
+        <id>https://docs.sagrest.it/blog/benvenuti</id>
+        <link href="https://docs.sagrest.it/blog/benvenuti"/>
+        <updated>2024-09-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Ecco a voi un nuovo spazio dedicato a tutti gli utenti e curiosi di Sagrest, il programma di gestione delle sagre che semplifica l'organizzazione e la pianificazione delle feste di paese!]]></summary>
+        <content type="html"><![CDATA[<p>Ecco a voi un nuovo spazio dedicato a tutti gli utenti e curiosi di Sagrest, il programma di gestione delle sagre che semplifica l'organizzazione e la pianificazione delle feste di paese!</p>
+<p>In questo blog troverete tutte le novità e gli aggiornamenti sul nostro software, inclusi i dettagli sulle future versioni. Condivideremo informazioni sulle nuove funzionalità, ed eventuali breaking changes che potrebbero richiedere attenzione da parte degli utenti.</p>
+<p>Inoltre, pubblicheremo casi d'uso reali di Sagrest applicati a varie sagre e feste popolari, per mostrarvi come la nostra piattaforma possa essere personalizzata e utilizzata con successo nelle più diverse situazioni. Ogni sagra ha le proprie tradizioni e peculiarità, e Sagrest è qui per aiutarvi a gestire il tutto con facilità e precisione.</p>
+<p>Restate sintonizzati per rimanere sempre aggiornati sui miglioramenti e le novità di Sagrest. Siamo entusiasti di condividere con voi il nostro percorso verso un modo più smart e organizzato di vivere le feste di paese!</p>]]></content>
+        <author>
+            <name>Matteo Gheza</name>
+            <uri>https://matteogheza.it</uri>
+        </author>
+        <category label="Informazioni" term="Informazioni"/>
+    </entry>
+</feed>

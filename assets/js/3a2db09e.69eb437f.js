@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksagrest_docs=self.webpackChunksagrest_docs||[]).push([[121],{8070:s=>{s.exports=JSON.parse('{"tags":[{"label":"Informazioni","permalink":"/blog/tags/info","description":"Articoli con informazioni generiche su Sagrest","count":1}]}')}}]);

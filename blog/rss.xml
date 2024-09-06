@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Sagrest Blog</title>
+        <link>https://docs.sagrest.it/blog</link>
+        <description>Sagrest Blog</description>
+        <lastBuildDate>Fri, 06 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>it</language>
+        <item>
+            <title><![CDATA[Benvenuti nel blog di Sagrest]]></title>
+            <link>https://docs.sagrest.it/blog/benvenuti</link>
+            <guid>https://docs.sagrest.it/blog/benvenuti</guid>
+            <pubDate>Fri, 06 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Ecco a voi un nuovo spazio dedicato a tutti gli utenti e curiosi di Sagrest, il programma di gestione delle sagre che semplifica l'organizzazione e la pianificazione delle feste di paese!]]></description>
+            <content:encoded><![CDATA[<p>Ecco a voi un nuovo spazio dedicato a tutti gli utenti e curiosi di Sagrest, il programma di gestione delle sagre che semplifica l'organizzazione e la pianificazione delle feste di paese!</p>
+<p>In questo blog troverete tutte le novità e gli aggiornamenti sul nostro software, inclusi i dettagli sulle future versioni. Condivideremo informazioni sulle nuove funzionalità, ed eventuali breaking changes che potrebbero richiedere attenzione da parte degli utenti.</p>
+<p>Inoltre, pubblicheremo casi d'uso reali di Sagrest applicati a varie sagre e feste popolari, per mostrarvi come la nostra piattaforma possa essere personalizzata e utilizzata con successo nelle più diverse situazioni. Ogni sagra ha le proprie tradizioni e peculiarità, e Sagrest è qui per aiutarvi a gestire il tutto con facilità e precisione.</p>
+<p>Restate sintonizzati per rimanere sempre aggiornati sui miglioramenti e le novità di Sagrest. Siamo entusiasti di condividere con voi il nostro percorso verso un modo più smart e organizzato di vivere le feste di paese!</p>]]></content:encoded>
+            <category>Informazioni</category>
+        </item>
+    </channel>
+</rss>

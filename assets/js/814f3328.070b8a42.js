@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksagrest_docs=self.webpackChunksagrest_docs||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Articoli recenti","items":[{"title":"Benvenuti nel blog di Sagrest","permalink":"/blog/benvenuti","unlisted":false,"date":"2024-09-06T00:00:00.000Z"}]}')}}]);
