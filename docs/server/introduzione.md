@@ -1,3 +1,7 @@
+---
+sidebar_position: 0
+---
+
 # Introduzione al server locale
 Questa soluzione di gestione delle ordinazioni funziona grazie ad un server centrale e indipendente, installato nella rete locale, che coordina tutti i client (le casse) e comunica con il **[server remoto](../online/introduzione)** per la funzione di ordini online.
 

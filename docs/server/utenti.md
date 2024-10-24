@@ -1,3 +1,7 @@
+---
+sidebar_position: 8
+---
+
 # Utenti
 ![](/img/server/users.png)
 In questa sezione è possibile gestire i utenti registrati all'interno del gestionale.

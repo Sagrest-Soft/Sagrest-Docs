@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Categorie
 ![](/img/server/categories.png)
 In questa sezione è possibile gestire le categorie dei prodotti e dei pacchetti.

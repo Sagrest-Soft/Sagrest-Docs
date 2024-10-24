@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Prodotti
 ![](/img/server/products.png)
 In questa sezione è possibile gestire i prodotti registrati all'interno del gestionale.
