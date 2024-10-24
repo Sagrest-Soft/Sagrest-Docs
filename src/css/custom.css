@@ -28,3 +28,12 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+article img {
+  border: 1px solid black !important;
+  padding: 0.5em !important;
+}
+
+.medium-zoom-image {
+  z-index: 200;
+}

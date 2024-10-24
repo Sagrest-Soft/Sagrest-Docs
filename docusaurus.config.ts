@@ -63,6 +63,10 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    'docusaurus-plugin-image-zoom'
+  ],
+
   themeConfig: {
     navbar: {
       title: 'Sagrest',
@@ -108,6 +112,13 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    zoom: {
+      selector: 'article img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)'
+      }
+    }
   } satisfies Preset.ThemeConfig,
 };
 
