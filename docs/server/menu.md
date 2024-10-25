@@ -16,6 +16,11 @@ Per creare uno nuovo menù, premere il pulsante `Aggiungi menù` e compilare il 
 Il nome dei menù deve essere **univoco**. Non è possibile creare due menù con lo stesso nome.
 :::
 
+:::warning
+Se è presente un menù con nome "**TEST**", questo non sarà conteggiato nel report generale di tutti i menù.  
+Per ulteriori informazioni, consultare la sezione [Report](report.md).
+:::
+
 Una volta premuto il pulsante di conferma, sarà possibile vedere una nuova riga nella tabella dei menù.  
 A questo punto, per poter aggiungere i prodotti al menù, premere il pulsante di modifica _(matita stilizzata)_ nella riga corrispondente al menù appena creato oppure premere sul nome del menù. A questo punto si verrà reindirizzati alla pagina di gestione del menù, simile a quella indicata di seguito:  
 ![](/img/server/menu_details.png)  
