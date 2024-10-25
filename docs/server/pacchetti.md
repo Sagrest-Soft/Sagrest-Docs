@@ -4,12 +4,33 @@ sidebar_position: 3
 
 # Pacchetti
 ![](/img/server/bundles.png)
-In questa sezione è possibile gestire i pacchetti, ovvero insiemi di prodotti venduti insieme a un prezzo scontato rispetto alla somma dei singoli prodotti.  
+In questa sezione è possibile creare e gestire i “pacchetti”.
+Un **pacchetto** può essere definito come un raggruppamento (insieme) di prodotti il cui prezzo complessivo di vendita
+risulta scontato e inferiore rispetto alla somma dei prezzi dei singoli prodotti costituenti il suddetto pacchetto.
+Un pacchetto permette di personalizzare la scelta e la combinazione dei prodotti che lo costituiscono.  
+Tipicamente, un pacchetto è costituito da prodotti appartenenti a categorie diverse (es. primi, secondi, panini, dolci, bibite, etc):
+all'interno di ciascuna di tali categorie possono essere presenti varie proposte di prodotti tra cui scegliere.
 
-In una serata di una sagra a tema panino, ad esempio, è possibile creare un pacchetto `Panino + Bibita` che include un panino e una bibita a un prezzo inferiore rispetto all'acquisto dei due prodotti separatamente.  
+Si veda il seguente esempio: *Pacchetto “Panino + Bibita”*.  
 *![](/img/server/bundles_example.svg)*  
-Continuando con questo esempio, possiamo definire un **pacchetto** come un insieme di **prodotti** venduti insieme a un prezzo scontato, e gli **elementi di un pacchetto** come i gruppi di prodotti che compongono il pacchetto (es. primi, secondi, dolci).  
-Non è obbligatorio che tutti gli elementi di un pacchetto siano selezionabili: è possibile rendere obbligatoria la selezione di alcuni elementi e lasciare libera scelta per altri (es. per i dolci o i contorni).
+
+- Il pacchetto “Panino + Bibita”, che include un panino e una bibita, sarà venduto ad un prezzo inferiore rispetto alla somma
+dei prezzi di panino e bibita acquistati singolarmente
+- *STEP 1*: la categoria/elemento “Panino” consente la scelta tra due tipologie di panino: per esempio
+  -	Pane e strinù
+  - Panino con porchetta  
+  <ins>N.B. è obbligatorio effettuare una scelta tra i due elementi panino proposti per poter procedere</ins>
+- *STEP 2*: la categoria/elemento “Bibita” consente la scelta tra quattro tipologie di bibite: esempio
+  - Acqua naturale 0,5L
+  - Acqua frizzante 0,5L
+  - The limone
+  - The pesca  
+  <ins>N.B. è obbligatorio effettuare una scelta tra i quattro elementi bibita proposti per poter procedere e chiudere il confezionamento del pacchetto</ins>
+- Dopo aver scelto i due prodotti costituenti il pacchetto, questo viene aggiunto all'ordine
+
+Oltre ai prodotti da scegliere obbligatoriamente, un pacchetto può presentare elementi la cui scelta sarà **opzionale**:
+in tal caso, l'utente può decidere se includere o meno tali elementi nel pacchetto (es. _dolci_, vedi figura sottostante).  
+*![](/img/server/bundles_example_optional.svg)*  
 
 ## Creare un nuovo pacchetto
 ![](/img/server/bundles_add.png)  
