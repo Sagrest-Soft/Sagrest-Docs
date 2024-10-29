@@ -28,11 +28,20 @@ A questo punto, per poter aggiungere i prodotti al menù, premere il pulsante di
 
 ## Aggiunta di prodotti al menù
 Per aggiungere un prodotto o un pacchetto al menù, seguire le seguenti istruzioni:
-1. Raggiungere la pagina di gestione del menù (vedi sezione seguente)
+1. Raggiungere la pagina di gestione del menù [(vedi sezione dedicata)](#raggiungere-la-pagina-di-gestione-del-men%C3%B9)
 2. Se si vuole aggiungere un prodotto o un pacchetto, premere il pulsante `Aggiungi singolo elemento` e compilare il modulo con i dati richiesti. **La quantità non è necessaria**.
 3. Se si vuole aggiungere contemporaneamente più prodotti o pacchetti, premere la lista a discesa sotto al titolo `Elementi`, selezionare il prodotto o il pacchetto desiderato e premere il pulsante `Aggiungi`.
 ![](/img/server/menu_details_add_bulk.png)
 
+## Modifica delle rimanenze di un prodotto o un pacchetto
+Per modificare le rimanenze di un prodotto o un pacchetto all'interno di un menù, raggiungere la pagina di gestione del menù [(vedi sezione dedicata)](#raggiungere-la-pagina-di-gestione-del-men%C3%B9) e inserire un valore nel campo corrispondende, nella colonna "Rimanenti" della tabella, e premere il tasto `Modifica`.  
+Per impostare le rimanenze a **illimitate**, inserire il valore `-1` oppure svuotare il campo di inserimento e premere il tasto `Modifica`.  
+
+![](/img/server/menu_details_row.png)
+
+:::info
+Per <u>impedire l'ordine online di un prodotto o un pacchetto</u>, abilitare il check "**Nascosto online**" per quell'elemento.
+:::
 
 ## Raggiungere la pagina di gestione del menù
 Per modificare un menù, le rimanenze e gli elementi che contiene, premere il pulsante di modifica _(matita stilizzata)_ nella riga corrispondente al menù che si intende modificare.  
