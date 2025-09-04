@@ -58,10 +58,14 @@ Dopo aver inserito tutti gli elementi, premere il pulsante `Salva pacchetto` per
 
 ### Esempio
 Di seguito, un video che mostra la creazione di un pacchetto con 3 elementi:
-<video width="100%" controls>
-  <source src="/video/server/bundles_add.mp4" type="video/mp4" />
-  Il tuo browser non supporta la riproduzione di video. Prova a scaricare il video [qui](/video/server/bundles_add.mp4).
-</video>
+
+import PeertubeVideo from '@site/src/components/PeertubeVideo';
+
+<PeertubeVideo 
+  videoId="wkya4AbrojqhCiMWwFkBEg" 
+  title="Sagrest - Aggiunta pacchetti"
+  fallbackVideoPath="/video/server/bundles_add.mp4"
+/>
 
 ## Modificare un pacchetto
 Per modificare un pacchetto, premere il pulsante di modifica _(matita stilizzata)_ nella riga corrispondente al pacchetto che si intende modificare.  

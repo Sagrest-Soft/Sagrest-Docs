@@ -53,10 +53,14 @@ Per poter personalizzare questi messaggi, è necessario recarsi nella sezione [`
 A questo punto, si aprirà un editor di testo avanzato, che permetterà di inserire il messaggio desiderato, con la formattazione voluta.  
 ![](/img/server/option_richtext_editor_modal.png)  
 Nel seguente video, è possibile vedere un esempio di modifica del messaggio nella barra superiore:
-<video width="100%" controls>
-  <source src="/video/server/custom_message_bars.mp4" type="video/mp4" />
-  Il tuo browser non supporta la riproduzione di video. Prova a scaricare il video [qui](/video/server/custom_message_bars.mp4).
-</video>
+
+import PeertubeVideo from '@site/src/components/PeertubeVideo';
+
+<PeertubeVideo 
+  videoId="socq2KRKsmA9kvzkDSmUAv" 
+  title="Sagrest - Messaggi personalizzati interfaccia online"
+  fallbackVideoPath="/video/server/custom_message_bars.mp4"
+/>
 
 ## Gestione database
 Per **esportare** il database, premere il pulsante `Esporta database` e verrà scaricato un file `.db` contenente l'intero database in formato SQLite3.  
