@@ -10,7 +10,10 @@ In questa pagina, è possibile visualizzare le informazioni di diagnostica e mod
 Se i client di cassa sono accesi e collegati alla rete locale, in questa sezione verranno mostrati in un'apposita lista.
 ![](/img/server/system_clients_connected.png)  
 Premendo l'apposito pulsante `Disconnetti`, è possibile disconnettere forzatamente un client di cassa dalla rete locale.  
-![](/img/server/system_disconnect_client.png)
+
+import ClientDisconnect from '/img/server/system_disconnect_client.png';
+
+<img src={ClientDisconnect} width="400" />
 :::tip
 Se è necessario svolgere modifiche veloci ai prodotti, alle categorie o utilizzare altre funzionalità che vengono disabilitate quando le casse sono connesse al server, è possibile disconnettere forzatamente tutti i client di cassa per poter svolgere le modifiche necessarie.
 :::
