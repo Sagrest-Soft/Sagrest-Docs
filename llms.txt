@@ -1,0 +1,22 @@
+# Sagrest
+
+> Documentazione ufficiale di Sagrest, il programma di gestione delle ordinazioni per le sagre di paese, con funzione di ordine online da telefono.
+
+
+## docs
+
+- [Introduzione al client](/docs/client/introduzione.md)
+- [Introduzione](/docs/intro.md): Queste pagine di documentazione permettono di comprendere il funzionamento della soluzione "Sagrest",
+- [Configurazione dell'ordinazione online](/docs/online/configurazione.md): Attivazione della funzionalità
+- [Ordini online (server remoto)](/docs/online/introduzione.md): La funzione di ordinazione online di Sagrest consente ai fruitori dell'evento di effettuare ordini direttamente dal proprio telefono, migliorando così l'efficienza del servizio e la soddisfazione dei clienti. Con questa modalità, gli utenti possono visualizzare il menu completo, selezionare le quantità dei piatti desiderati, e inviare l'ordine senza dover fare lunghe code.
+- [Amministrazione di sistema](/docs/server/amministrazione.md): In questa pagina, è possibile visualizzare le informazioni di diagnostica e modificare lo stato della connessione con il server remoto di ordinazioni online.
+- [Categorie](/docs/server/categorie.md): In questa sezione è possibile gestire le categorie dei prodotti e dei pacchetti.
+- [Introduzione al server locale](/docs/server/introduzione.md): Questa soluzione di gestione delle ordinazioni funziona grazie ad un server centrale e indipendente, installato nella rete locale, che coordina tutti i client (le casse) e comunica con il server remoto per la funzione di ordini online.
+- [Menù](/docs/server/menu.md): In questa sezione è possibile gestire i menù registrati all'interno del gestionale.
+- [Metodi di pagamento](/docs/server/metodiPagamento.md): In questa sezione è possibile gestire i metodi di pagamento registrati all'interno del gestionale.
+- [Opzioni](/docs/server/opzioni.md): Attraverso questa sezione è possibile configurare le impostazioni interne del server e le informazioni della sagra.
+- [Pacchetti](/docs/server/pacchetti.md): In questa sezione è possibile creare e gestire i “pacchetti”.
+- [Prodotti](/docs/server/prodotti.md): In questa sezione è possibile gestire i prodotti registrati all'interno del gestionale.
+- [Report](/docs/server/report.md): In questa sezione è possibile visualizzare i report generati dal gestionale sulla base degli ordini registrati, attraverso tabelle e grafici.
+- [Stampanti](/docs/server/stampanti.md): In questa sezione è possibile gestire le stampanti registrati all'interno del gestionale.
+- [Utenti](/docs/server/utenti.md): In questa sezione è possibile gestire i utenti registrati all'interno del gestionale.
