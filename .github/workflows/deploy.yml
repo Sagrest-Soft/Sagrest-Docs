@@ -32,6 +32,23 @@ jobs:
       - name: Run embedding script
         run: pnpm run embed
 
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add static/vector-cache-metadata.json static/vector-cache.zip
+          if git diff --staged --quiet; then
+            echo "No changes to vector cache files."
+          else
+            git commit -m "chore: update vector cache [skip ci]"
+            git push
+          fi
+
+      - name: Sync new cache to build directory
+        run: |
+          cp static/vector-cache-metadata.json build/
+          cp static/vector-cache.zip build/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
