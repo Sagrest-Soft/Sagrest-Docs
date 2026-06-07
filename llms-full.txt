@@ -5,7 +5,7 @@
 
 ## docs
 
-- [Introduzione al client](/docs/client/introduzione.md)
+- [Introduzione al client](/docs/client/introduzione.md): test
 - [Introduzione](/docs/intro.md): Queste pagine di documentazione permettono di comprendere il funzionamento della soluzione "Sagrest",
 - [Configurazione dell'ordinazione online](/docs/online/configurazione.md): Attivazione della funzionalità
 - [Ordini online (server remoto)](/docs/online/introduzione.md): La funzione di ordinazione online di Sagrest consente ai fruitori dell'evento di effettuare ordini direttamente dal proprio telefono, migliorando così l'efficienza del servizio e la soddisfazione dei clienti. Con questa modalità, gli utenti possono visualizzare il menu completo, selezionare le quantità dei piatti desiderati, e inviare l'ordine senza dover fare lunghe code.
@@ -27,6 +27,8 @@
 # Full Documentation Content
 
 # Introduzione al client
+
+*test*
 
 
 ---
