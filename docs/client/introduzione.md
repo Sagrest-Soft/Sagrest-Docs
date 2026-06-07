@@ -1,3 +1,1 @@
 # Introduzione al client
-
-*test*
