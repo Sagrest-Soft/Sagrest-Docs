@@ -1,6 +1,6 @@
 {
-  "documentHash": "3e4df2faab6f2e133ffc67460dc7a0a9",
-  "builtAt": "2026-06-07T12:26:16.403Z",
+  "documentHash": "be286085ccbadea55e4ee6a0099bc462",
+  "builtAt": "2026-06-07T12:27:37.944Z",
   "model": "text-embedding-3-small",
   "chunkCount": 120,
   "chunkSize": 1000,
