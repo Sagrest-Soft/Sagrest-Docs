@@ -20,7 +20,7 @@
  */
 
 import { createHash } from 'crypto';
-import { readFile, writeFile, mkdir, access } from 'fs/promises';
+import { readFile, writeFile, mkdir, access, rm } from 'fs/promises';
 import { createWriteStream } from 'fs';
 import { join, dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
@@ -78,6 +78,7 @@ interface BuildMetadata {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DRY_RUN = process.argv.includes('--dry-run');
+const DEBUG_CHUNKS = process.argv.includes('--debug-chunks');
 
 const CONFIG: Config = {
   /** Path to the full documentation text file */
@@ -111,6 +112,39 @@ const CONFIG: Config = {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
+/** 
+ * Writes chunks to a debug folder for inspection. 
+ * This helps verify sanitization and context prepending.
+ */
+async function writeDebugChunks(chunks: Document<ChunkMetadata>[]): Promise<void> {
+  const debugDir = join(__dirname, 'debug-chunks');
+  log('🐛', 'Debug', `Writing ${chunks.length} chunks to ${debugDir}`);
+  
+  try {
+    await rm(debugDir, { recursive: true, force: true });
+    await mkdir(debugDir, { recursive: true });
+    
+    for (const chunk of chunks) {
+      const filename = `chunk-${String(chunk.metadata.index).padStart(3, '0')}.md`;
+      const filePath = join(debugDir, filename);
+      
+      const debugContent = [
+        `---`,
+        `heading: ${chunk.metadata.heading}`,
+        `title: ${chunk.metadata.title}`,
+        `---`,
+        ``,
+        chunk.pageContent
+      ].join('\n');
+      
+      await writeFile(filePath, debugContent);
+    }
+    logDetail(`Done. Inspect the files to verify chunk quality.`);
+  } catch (err) {
+    log('⚠️', 'Debug Error', String(err));
+  }
+}
+
 /** ANSI colour helpers (no external deps) */
 const c = {
   reset: '\x1b[0m',
@@ -121,6 +155,19 @@ const c = {
   red: '\x1b[31m',
   grey: '\x1b[90m',
 } as const;
+
+/**
+ * Removes noise from text, including Docusaurus anchors, Markdown images,
+ * and base64 encoded image data.
+ */
+function sanitizeHeading(text: string): string {
+  return text
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, '') // Remove Markdown images
+    .replace(/data:image\/[^;]+;base64,[^"'\s)]+/g, '') // Remove base64 data
+    .replace(/\[​?\]\(#[^)]+\)/g, '') // Remove Docusaurus anchor noise
+    .replace(/[\s\u200B]+$/, '')
+    .trim();
+}
 
 function log(icon: string, label: string, msg = ''): void {
   console.log(`${c.bold}${icon}${c.reset}  ${c.cyan}${label}${c.reset}  ${msg}`);
@@ -197,24 +244,29 @@ function splitByHeadings(content: string): HeadingSection[] {
     const h3m = line.match(/^### (.+)/);
     const h2m = !h3m && line.match(/^## (.+)/);
     const h1m = !h3m && !h2m && line.match(/^# (.+)/);
+    // Also treat horizontal rules (---) as logical section boundaries
+    const isHr = line.trim() === '---';
 
     if (h1m) {
       flush();
-      h1 = h1m[1].trim();
+      h1 = sanitizeHeading(h1m[1]);
       h2 = '';
       h3 = '';
-      buf.push(line);
+      buf.push(`# ${h1}`);
     } else if (h2m) {
       flush();
-      h2 = h2m[1].trim();
+      h2 = sanitizeHeading(h2m[1]);
       h3 = '';
-      buf.push(line);
+      buf.push(`## ${h2}`);
     } else if (h3m) {
       flush();
-      h3 = h3m[1].trim();
-      buf.push(line);
+      h3 = sanitizeHeading(h3m[1]);
+      buf.push(`### ${h3}`);
+    } else if (isHr) {
+      flush();
     } else {
-      buf.push(line);
+      // Clean each line to remove any inline Docusaurus anchor noise
+      buf.push(sanitizeHeading(line));
     }
   }
 
@@ -275,17 +327,23 @@ async function splitContent(content: string): Promise<Document<ChunkMetadata>[]>
     chunkSize: CONFIG.chunkSize,
     chunkOverlap: CONFIG.chunkOverlap,
   });
-  const chunks = await charSplitter.splitDocuments(sectionDocs);
+  const rawChunks = await charSplitter.splitDocuments(sectionDocs);
 
-  // Enrich: add source + human-readable heading breadcrumb
-  const enriched: Document<ChunkMetadata>[] = chunks.map((doc, i) => {
+  // Enrich: add source + human-readable heading breadcrumb + PREPEND to content
+  const enriched: Document<ChunkMetadata>[] = rawChunks.map((doc, i) => {
     const { h1 = '', h2 = '', h3 = '' } = doc.metadata as Partial<ChunkMetadata>;
     const heading = [h1, h2, h3].filter(Boolean).join(' › ');
+    
+    // Crucial for quality: Prepend the full heading context to the chunk's content
+    // so that OpenAI embeddings capture the semantic location of the text.
+    const contextPrefix = heading ? `# ${heading}\n\n` : '';
+    const pageContentWithContext = contextPrefix + doc.pageContent;
 
     return new Document<ChunkMetadata>({
-      pageContent: doc.pageContent,
+      pageContent: pageContentWithContext,
       metadata: {
         source: 'llms-full.txt',
+        title: h3 || h2 || h1 || 'Untitled', // Providing 'title' for search result UI
         heading: heading || '(no heading)',
         index: i,
         h1, h2, h3,
@@ -293,14 +351,40 @@ async function splitContent(content: string): Promise<Document<ChunkMetadata>[]>
     });
   });
 
-  const totalChars = enriched.reduce((sum, d) => sum + d.pageContent.length, 0);
+  // Filter out low-value chunks (redundant headings, placeholders like "Full Documentation Content")
+  const filtered = enriched.filter((doc) => {
+    const content = doc.pageContent.trim();
+    const heading = doc.metadata.heading;
+    
+    // 1. Remove the prepended breadcrumb for validation
+    const breadcrumb = `# ${heading}`;
+    let substantiveContent = content;
+    if (content.startsWith(breadcrumb)) {
+      substantiveContent = content.slice(breadcrumb.length).trim();
+    }
+
+    // 2. Ignore if it's just a repetition of the heading (e.g. "# Heading\n\n# Heading")
+    // or if it contains only placeholders like "## docs" or "Full Documentation Content"
+    const isPlaceholder = /^(#+ )?(docs|Full Documentation Content)$/i.test(substantiveContent);
+    const isRedundantHeading = substantiveContent.replace(/^#+ /, '').trim() === heading;
+    
+    // Only keep if it has actual content and isn't just a placeholder/redundant
+    return substantiveContent.length > 0 && !isPlaceholder && !isRedundantHeading;
+  });
+
+  // Re-index after filtering
+  filtered.forEach((doc, i) => {
+    doc.metadata.index = i;
+  });
+
+  const totalChars = filtered.reduce((sum, d) => sum + d.pageContent.length, 0);
   logDetail(
-    `${enriched.length} final chunks · ` +
-    `avg ${Math.round(totalChars / enriched.length)} chars/chunk · ` +
+    `${filtered.length} final chunks · ` +
+    `avg ${Math.round(totalChars / filtered.length)} chars/chunk · ` +
     `${elapsed(t)}`
   );
 
-  return enriched;
+  return filtered;
 }
 
 /**
@@ -399,13 +483,15 @@ async function checkIfDocumentChanged(newHash: string): Promise<boolean> {
     // Read old metadata JSON if it exists to read document hash
     const oldMetaContent = await readFile(CONFIG.metadataPath, 'utf-8');
     const oldMeta: BuildMetadata = JSON.parse(oldMetaContent);
-    const previousHash = oldMeta.documentHash;
     
-    return newHash !== previousHash;
+    const hashMatches = newHash === oldMeta.documentHash;
+    const modelMatches = CONFIG.embeddingModel === oldMeta.model;
+    const chunkSizeMatches = CONFIG.chunkSize === oldMeta.chunkSize;
+    const chunkOverlapMatches = CONFIG.chunkOverlap === oldMeta.chunkOverlap;
+    
+    return !(hashMatches && modelMatches && chunkSizeMatches && chunkOverlapMatches);
   } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err);
-    console.error(`${c.red}✖  Cannot read document for integrity check: ${msg}${c.reset}`);
-    return true; // Assume changed if we can't read the file
+    return true; // Assume changed if we can't read the file or it's missing
   }
 }
 
@@ -420,6 +506,7 @@ async function main(): Promise<void> {
   console.log(`   Output : ${CONFIG.outputZip}`);
   console.log(`   Model  : ${CONFIG.embeddingModel}`);
   if (DRY_RUN) console.log(`   ${c.yellow}Mode   : DRY RUN (no OpenAI calls)${c.reset}`);
+  if (DEBUG_CHUNKS) console.log(`   ${c.cyan}Mode   : DEBUG CHUNKS (saving to debug-chunks/)${c.reset}`);
   console.log();
 
   const content = await readInputFile();
@@ -429,13 +516,24 @@ async function main(): Promise<void> {
   hash.update(content);
   const documentHash = hash.digest('hex');
 
+  const chunks = await splitContent(content);
+
+  if (DEBUG_CHUNKS) {
+    await writeDebugChunks(chunks);
+    if (!process.argv.includes('--run-anyway')) {
+      console.log(`\n${c.yellow}Stopping because --debug-chunks is set.${c.reset}`);
+      console.log(`Review the chunks in ./embedding/debug-chunks/, then run without the flag to proceed with embedding.`);
+      console.log(`Or add ${c.bold}--run-anyway${c.reset} to do both.`);
+      return;
+    }
+  }
+
   if (!await checkIfDocumentChanged(documentHash)) {
     console.log(`${c.yellow}⚠️  Document has not changed since last build. Skipping embedding generation.${c.reset}`);
     console.log(`   If you want to force a rebuild, delete the existing metadata file or modify the document.`);
     return;
   }
 
-  const chunks = await splitContent(content);
   const vectorStore = await buildVectorStore(chunks);
   await saveVectorStore(vectorStore, chunks, documentHash);
   await createZip();

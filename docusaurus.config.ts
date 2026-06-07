@@ -76,7 +76,25 @@ const config: Config = {
       {
         content: {
           includeBlog: false,
-          enableLlmsFullTxt: true
+          enableLlmsFullTxt: true,
+          remarkPlugins: [
+            // Custom plugin to strip all images and base64 data
+            () => (tree) => {
+              const visit = (node) => {
+                if (node.children) {
+                  node.children = node.children.filter((child) => {
+                    // Remove standard markdown images
+                    if (child.type === 'image') return false;
+                    // Remove HTML-inlined images or base64 strings
+                    if (child.type === 'html' && /<img|data:image/i.test(child.value)) return false;
+                    return true;
+                  });
+                  node.children.forEach(visit);
+                }
+              };
+              visit(tree);
+            },
+          ],
         },
         siteDescription: 'Documentazione ufficiale di Sagrest, il programma di gestione delle ordinazioni per le sagre di paese, con funzione di ordine online da telefono.',
       },
