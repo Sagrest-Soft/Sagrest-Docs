@@ -31,6 +31,8 @@ jobs:
 
       - name: Run embedding script
         run: pnpm run embed
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
       - name: Commit and push changes
         run: |
