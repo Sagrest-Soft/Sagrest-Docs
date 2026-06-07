@@ -1,5 +1,14 @@
+packages:
+  - 'embedding'
+
 allowBuilds:
   core-js: true
   core-js-pure: true
+  esbuild: true
+  hnswlib-node: true
+  protobufjs: true
 
 minimumReleaseAge: 1440
+
+publicHoistPattern:
+  - 'hnswlib-node'

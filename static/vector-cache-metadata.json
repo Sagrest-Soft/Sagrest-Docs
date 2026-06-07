@@ -1,0 +1,8 @@
+{
+  "documentHash": "be286085ccbadea55e4ee6a0099bc462",
+  "builtAt": "2026-06-07T11:59:23.481Z",
+  "model": "text-embedding-3-small",
+  "chunkCount": 120,
+  "chunkSize": 1000,
+  "chunkOverlap": 200
+}

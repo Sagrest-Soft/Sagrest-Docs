@@ -75,7 +75,8 @@ const config: Config = {
       '@signalwire/docusaurus-plugin-llms-txt',
       {
         content: {
-          includeBlog: false
+          includeBlog: false,
+          enableLlmsFullTxt: true
         },
         siteDescription: 'Documentazione ufficiale di Sagrest, il programma di gestione delle ordinazioni per le sagre di paese, con funzione di ordine online da telefono.',
       },
