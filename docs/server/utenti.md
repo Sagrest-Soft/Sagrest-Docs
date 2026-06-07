@@ -1,10 +1,10 @@
 # Utenti
 
-![](/assets/images/users-d1549ff829dbc8091bd16df40489cee5.png) In questa sezione è possibile gestire i utenti registrati all'interno del gestionale.
+&#x20;In questa sezione è possibile gestire i utenti registrati all'interno del gestionale.
 
 ## Creare un nuovo utente[​](#creare-un-nuovo-utente "Link diretto a Creare un nuovo utente")
 
-![](/assets/images/users_add-da6c569d7903f47eae1469d2c0f59e1c.png)<br /><!-- -->Per creare uno nuovo utente, premere il pulsante `Aggiungi utente` e compilare il form con i dati richiesti:
+<br /><!-- -->Per creare uno nuovo utente, premere il pulsante `Aggiungi utente` e compilare il form con i dati richiesti:
 
 * **Username**: inserire il nome utilizzato per il login
 * **Nome**: inserire il nome dell'utente

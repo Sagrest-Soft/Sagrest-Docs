@@ -1,10 +1,10 @@
 # Stampanti
 
-![](/assets/images/printers-449eef29868eacac25fb9b9295832060.png) In questa sezione è possibile gestire le stampanti registrati all'interno del gestionale.
+&#x20;In questa sezione è possibile gestire le stampanti registrati all'interno del gestionale.
 
 ## Creare un nuovo stampante[​](#creare-un-nuovo-stampante "Link diretto a Creare un nuovo stampante")
 
-![](/assets/images/printers_add-089fea6be7068ba9ea069ff5f01d0fd5.png)<br /><!-- -->Per creare uno nuovo stampante, premere il pulsante `Aggiungi stampante` e compilare il form con i dati richiesti:
+<br /><!-- -->Per creare uno nuovo stampante, premere il pulsante `Aggiungi stampante` e compilare il form con i dati richiesti:
 
 * **Nome**: inserire il nome del stampante
 * **Dividi i prodotti presenti nei pacchetti**: se attivato, se la parte dell'ordine inviata a quella stampante contiene dei pacchetti, i prodotti verranno divisi. Se disattivato, i prodotti verranno stampati indipedentemente dal fatto che siano contenuti in un pacchetto o meno.

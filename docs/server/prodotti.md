@@ -1,10 +1,10 @@
 # Prodotti
 
-![](/assets/images/products-3d3c0ecf722d5943f5f419c065cbfa6f.png) In questa sezione è possibile gestire i prodotti registrati all'interno del gestionale.
+&#x20;In questa sezione è possibile gestire i prodotti registrati all'interno del gestionale.
 
 ## Creare un nuovo prodotto[​](#creare-un-nuovo-prodotto "Link diretto a Creare un nuovo prodotto")
 
-![](/assets/images/products_add-b808d12f050e88a36ef714937593a404.png)<br /><!-- -->Per creare uno nuovo prodotto, premere il pulsante `Aggiungi prodotto` e compilare il form con i dati richiesti:
+<br /><!-- -->Per creare uno nuovo prodotto, premere il pulsante `Aggiungi prodotto` e compilare il form con i dati richiesti:
 
 * **Nome**: inserire il nome del prodotto
 * **Prezzo**: inserire il prezzo del prodotto

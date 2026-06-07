@@ -1,8 +1,8 @@
 {
-  "documentHash": "be286085ccbadea55e4ee6a0099bc462",
-  "builtAt": "2026-06-07T12:27:37.944Z",
+  "documentHash": "d74fa7bcc5e898c04bed5efc072477c0",
+  "builtAt": "2026-06-07T15:33:52.912Z",
   "model": "text-embedding-3-small",
-  "chunkCount": 120,
+  "chunkCount": 68,
   "chunkSize": 1000,
   "chunkOverlap": 200
 }

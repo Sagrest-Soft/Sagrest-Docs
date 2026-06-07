@@ -1,8 +1,8 @@
 # Pacchetti
 
-![](/assets/images/bundles-7f59af4a124a36be24b6981d7451aa45.png) In questa sezione è possibile creare e gestire i “pacchetti”. Un **pacchetto** può essere definito come un raggruppamento (insieme) di prodotti il cui prezzo complessivo di vendita risulta scontato e inferiore rispetto alla somma dei prezzi dei singoli prodotti costituenti il suddetto pacchetto. Un pacchetto permette di personalizzare la scelta e la combinazione dei prodotti che lo costituiscono.<br /><!-- -->Tipicamente, un pacchetto è costituito da prodotti appartenenti a categorie diverse (es. primi, secondi, panini, dolci, bibite, etc): all'interno di ciascuna di tali categorie possono essere presenti varie proposte di prodotti tra cui scegliere.
+&#x20;In questa sezione è possibile creare e gestire i “pacchetti”. Un **pacchetto** può essere definito come un raggruppamento (insieme) di prodotti il cui prezzo complessivo di vendita risulta scontato e inferiore rispetto alla somma dei prezzi dei singoli prodotti costituenti il suddetto pacchetto. Un pacchetto permette di personalizzare la scelta e la combinazione dei prodotti che lo costituiscono.<br /><!-- -->Tipicamente, un pacchetto è costituito da prodotti appartenenti a categorie diverse (es. primi, secondi, panini, dolci, bibite, etc): all'interno di ciascuna di tali categorie possono essere presenti varie proposte di prodotti tra cui scegliere.
 
-Si veda il seguente esempio: *Pacchetto “Panino + Bibita”*.<br />*![](/assets/images/bundles_example-c8243884703c7edeccbbbff76d33831c.svg)*
+Si veda il seguente esempio: *Pacchetto “Panino + Bibita”*.<br />**
 
 * Il pacchetto “Panino + Bibita”, che include un panino e una bibita, sarà venduto ad un prezzo inferiore rispetto alla somma dei prezzi di panino e bibita acquistati singolarmente
 
@@ -28,11 +28,11 @@ Si veda il seguente esempio: *Pacchetto “Panino + Bibita”*.<br />*![](/asset
 
 * Dopo aver scelto i due prodotti costituenti il pacchetto, questo viene aggiunto all'ordine
 
-Oltre ai prodotti da scegliere obbligatoriamente, un pacchetto può presentare elementi la cui scelta sarà **opzionale**: in tal caso, l'utente può decidere se includere o meno tali elementi nel pacchetto (es. *dolci*, vedi figura sottostante).<br />*![](/assets/images/bundles_example_optional-224061cc525e1df80f956dd12bf1b19a.svg)*
+Oltre ai prodotti da scegliere obbligatoriamente, un pacchetto può presentare elementi la cui scelta sarà **opzionale**: in tal caso, l'utente può decidere se includere o meno tali elementi nel pacchetto (es. *dolci*, vedi figura sottostante).<br />**
 
 ## Creare un nuovo pacchetto[​](#creare-un-nuovo-pacchetto "Link diretto a Creare un nuovo pacchetto")
 
-![](/assets/images/bundles_add-66c413921d46f05b0053f5cecc389723.png)<br /><!-- -->Per creare uno nuovo pacchetto, premere il pulsante `Aggiungi pacchetto` e compilare il form con i dati richiesti:
+<br /><!-- -->Per creare uno nuovo pacchetto, premere il pulsante `Aggiungi pacchetto` e compilare il form con i dati richiesti:
 
 * **Nome**: inserire il nome del pacchetto
 
@@ -53,7 +53,7 @@ informazioni
 
 Se il prezzo fisso di un pacchetto è intero, non è necessario inserire i decimali.
 
-A questo punto, una volta premuto il pulsante di conferma, sarà possibile vedere una nuova riga nella tabella dei pacchetti.<br /><!-- -->Per poter aggiungere i prodotti al pacchetto, premere il pulsante di modifica *(matita stilizzata)* nella riga corrispondente al pacchetto appena creato. Si dovrebbe aprire un banner simile a quello di aggiunta, ma con una nuova sezione per l'aggiunta degli elementi:<br />![](/assets/images/bundles_elements_empty-36782ca7c1c3adf106254c779772feff.png)<br /><!-- -->Per aggiungere un nuovo elemento, premere il pulsante `Aggiungi elemento` e compilare il form con i dati richiesti:<br />![](/assets/images/bundles_add_element-19518dab82a1b8d10b62c2bf0fd7b392.png)<br /><!-- -->Dopo aver inserito tutti gli elementi, premere il pulsante `Salva pacchetto` per confermare le creazione del pacchetto.
+A questo punto, una volta premuto il pulsante di conferma, sarà possibile vedere una nuova riga nella tabella dei pacchetti.<br /><!-- -->Per poter aggiungere i prodotti al pacchetto, premere il pulsante di modifica *(matita stilizzata)* nella riga corrispondente al pacchetto appena creato. Si dovrebbe aprire un banner simile a quello di aggiunta, ma con una nuova sezione per l'aggiunta degli elementi:<br /><br /><!-- -->Per aggiungere un nuovo elemento, premere il pulsante `Aggiungi elemento` e compilare il form con i dati richiesti:<br /><br /><!-- -->Dopo aver inserito tutti gli elementi, premere il pulsante `Salva pacchetto` per confermare le creazione del pacchetto.
 
 ### Esempio[​](#esempio "Link diretto a Esempio")
 

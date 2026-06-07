@@ -8,7 +8,7 @@ Il dispositivo sul quale questo server è installato (contrassegnato dall'adesiv
 
 ## Interfaccia[​](#interfaccia "Link diretto a Interfaccia")
 
-![](/assets/images/interface-dbcd9f52396ea94a75ad8c857a9f1062.png) L'interfaccia di Sagrest è stata progettata per essere intuitiva e facile da usare. Attraverso di essa, gli operatori possono gestire tutte le funzionalità del sistema in modo efficiente. L'interfaccia principale offre accesso rapido alle sezioni più utilizzate, come la gestione dei prodotti, la configurazione dei menù e la visualizzazione dei report.<br /><!-- -->Ogni sezione è organizzata in modo logico, con menu e sottomenu che guidano l'utente attraverso le varie operazioni. Inoltre, l'interfaccia è responsive, il che significa che può essere utilizzata comodamente sia su dispositivi desktop che su dispositivi mobili.
+&#x20;L'interfaccia di Sagrest è stata progettata per essere intuitiva e facile da usare. Attraverso di essa, gli operatori possono gestire tutte le funzionalità del sistema in modo efficiente. L'interfaccia principale offre accesso rapido alle sezioni più utilizzate, come la gestione dei prodotti, la configurazione dei menù e la visualizzazione dei report.<br /><!-- -->Ogni sezione è organizzata in modo logico, con menu e sottomenu che guidano l'utente attraverso le varie operazioni. Inoltre, l'interfaccia è responsive, il che significa che può essere utilizzata comodamente sia su dispositivi desktop che su dispositivi mobili.
 
 Nelle prossime sezioni della documentazione, verranno mostrate le funzioni principali del programma, e le principali impostazioni di configurazione del programma.
 
@@ -16,7 +16,7 @@ Nelle prossime sezioni della documentazione, verranno mostrate le funzioni princ
 
 Per poter accedere alle varie pagine di configurazione, è necessario inserire le credenziali di accesso.<br /><!-- -->Queste credenziali sono state fornite dall'installatore del programma e possono essere modificate in qualsiasi momento.
 
-![](/assets/images/login-e14e1cb647803b2ec7af3b4ca8974056.png)<br /><!-- -->Per effettuare il login, selezionare l'utente nel campo `Username` e inserire il codice di accesso dell'utente nel campo `PIN`. Infine, premere il pulsante `Login` per confermare l'accesso.
+<br /><!-- -->Per effettuare il login, selezionare l'utente nel campo `Username` e inserire il codice di accesso dell'utente nel campo `PIN`. Infine, premere il pulsante `Login` per confermare l'accesso.
 
 informazioni
 
