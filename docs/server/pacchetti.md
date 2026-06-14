@@ -57,7 +57,11 @@ Per aggiungere un nuovo elemento, premere il pulsante `Aggiungi elemento` e comp
 Dopo aver inserito tutti gli elementi, premere il pulsante `Salva pacchetto` per confermare le creazione del pacchetto.  
 
 ### Esempio
-Di seguito, un video che mostra la creazione di un pacchetto con 3 elementi:
+Di seguito, un video che mostra la creazione di un pacchetto con 3 elementi.
+
+:::info
+Il video è stato registrato con una versione precedente del programma, quindi l'interfaccia potrebbe essere leggermente diversa da quella attuale, ma la procedura è la stessa.
+:::
 
 import PeertubeVideo from '@site/src/components/PeertubeVideo';
 
