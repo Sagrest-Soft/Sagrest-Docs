@@ -389,7 +389,11 @@ A questo punto, una volta premuto il pulsante di conferma, sarà possibile veder
 
 ### Esempio[​](#esempio "Link diretto a Esempio")
 
-Di seguito, un video che mostra la creazione di un pacchetto con 3 elementi:
+Di seguito, un video che mostra la creazione di un pacchetto con 3 elementi.
+
+informazioni
+
+Il video è stato registrato con una versione precedente del programma, quindi l'interfaccia potrebbe essere leggermente diversa da quella attuale, ma la procedura è la stessa.
 
 <!-- -->
 

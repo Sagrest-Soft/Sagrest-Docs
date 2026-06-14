@@ -4,10 +4,24 @@
         <title>Sagrest Blog</title>
         <link>https://docs.sagrest.it/blog</link>
         <description>Sagrest Blog</description>
-        <lastBuildDate>Fri, 06 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 15 Jun 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>it</language>
+        <item>
+            <title><![CDATA[Novità in arrivo su Sagrest!]]></title>
+            <link>https://docs.sagrest.it/blog/novita-in-arrivo-2026</link>
+            <guid>https://docs.sagrest.it/blog/novita-in-arrivo-2026</guid>
+            <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[L'inizio della stagione delle sagre 2026 segna un nuovo capitolo per Sagrest, che a breve verrà aggiornato con l'obiettivo di rendere l'organizzazione degli eventi ancora più semplice, veloce ed efficiente.]]></description>
+            <content:encoded><![CDATA[<p>L'inizio della stagione delle sagre 2026 segna un nuovo capitolo per Sagrest, che a breve verrà aggiornato con l'obiettivo di rendere l'organizzazione degli eventi ancora più semplice, veloce ed efficiente.</p>
+<p>Tra le funzionalità in arrivo troviamo una migliore integrazione con il sistema di pagamento SumUp, inclusa la possibilità di monitorare lo stato dei lettori di carte direttamente da Sagrest.</p>
+<p>Stiamo inoltre lavorando all'introduzione di strumenti basati sull'intelligenza artificiale per velocizzare l'importazione di prodotti e menu, riducendo il tempo necessario alla configurazione iniziale della manifestazione. Una delle novità più importanti in questo ambito sarà il chatbot integrato, che permetterà di aggiungere o modificare dati tramite semplici richieste in linguaggio naturale, consultare rapidamente i report di vendita e ottenere risposte immediate sulla documentazione del software.</p>
+<p>È in arrivo anche una nuova interfaccia web di gestione, completamente rinnovata per offrire prestazioni migliori, maggiore rapidità e un'esperienza d'uso più intuitiva.</p>
+<p>Infine, stiamo introducendo diversi miglioramenti all'interfaccia degli ordini online per rendere l'esperienza di acquisto più fluida e piacevole per i visitatori.</p>
+<p>Non vediamo l'ora di condividere con voi le prossime novità e di accompagnarvi in un'altra fantastica stagione di feste, tradizioni e comunità. Restate sintonizzati! 🚀</p>]]></content:encoded>
+            <category>Informazioni</category>
+        </item>
         <item>
             <title><![CDATA[Benvenuti nel blog di Sagrest]]></title>
             <link>https://docs.sagrest.it/blog/benvenuti</link>
